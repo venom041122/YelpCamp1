@@ -31,7 +31,7 @@ const MongoDBStore=require("connect-mongo")(session)
 
 
 // 'mongodb://127.0.0.1:27017/yelp-camp'
-const dbURL='mongodb://127.0.0.1:27017/yelp-camp'
+const dbURL=process.env.DB_URL
 mongoose.connect(dbURL)
 .then(()=>{
     console.log("Mongo connection open")
